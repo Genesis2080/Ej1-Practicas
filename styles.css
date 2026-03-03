@@ -6,9 +6,9 @@
   --color-bg: #f3f4f6;
   --color-card: #ffffff;
   --color-text: #1f2937;
-  --color-high: #ef4444;
-  --color-medium: #f59e0b;
-  --color-low: #10b981;
+  --color-urgent: #dc2626;      /* rojo fuerte */
+  --color-progress: #2563eb;    /* azul moderno */
+  --color-optional: #6b7280;
 
   --spacing: 1rem;
   --radius: 10px;
@@ -87,22 +87,23 @@ header {
 
 /* BADGES */
 .badge {
-  padding: 0.3rem 0.6rem;
-  border-radius: 20px;
-  color: white;
-  font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
-.high .badge {
-  background: var(--color-high);
+.urgent {
+    background-color: var(--color-urgent);
 }
 
-.medium .badge {
-  background: var(--color-medium);
+.progress {
+    background-color: var(--color-progress);
 }
 
-.low .badge {
-  background: var(--color-low);
+.optional {
+    background-color: var(--color-optional);
 }
 
 /* 
