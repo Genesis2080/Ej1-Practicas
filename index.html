@@ -14,23 +14,26 @@
 
   <main class="layout">
 
-    <aside class="sidebar">
-      <h2>Categorías</h2>
-      <ul class="category-list">
-    <li>
-        <span>Proyectos</span>
-        <span class="count">4</span>
-    </li>
-    <li>
-        <span>Desarrollo</span>
-        <span class="count">2</span>
-    </li>
-    <li>
-        <span>Personal</span>
-        <span class="count">3</span>
-    </li>
-</ul>
-    </aside>
+   <aside class="sidebar">
+    <h2>Categorías</h2>
+
+    <ul class="category-list">
+        <li data-category="Proyectos">
+            <span>Proyectos</span>
+            <span class="count">4</span>
+        </li>
+
+        <li data-category="Desarrollo">
+            <span>Desarrollo</span>
+            <span class="count">2</span>
+        </li>
+
+        <li data-category="Personal">
+            <span>Personal</span>
+            <span class="count">3</span>
+        </li>
+    </ul>
+</aside>
 
     <section class="content">
       <h2>Mis Tareas</h2>
@@ -62,6 +65,26 @@
     </section>
 
   </main>
+  
+<script>
+    const categories = document.querySelectorAll('.category-list li');
+    const title = document.querySelector('.content h2');
+
+    categories.forEach(category => {
+        category.addEventListener('click', () => {
+
+            // Quitar active de todos
+            categories.forEach(cat => cat.classList.remove('active'));
+
+            // Agregar active al seleccionado
+            category.classList.add('active');
+
+            // Cambiar título principal
+            const selected = category.dataset.category;
+            title.textContent = "Tareas - " + selected;
+        });
+    });
+</script>
 
 </body>
 </html>

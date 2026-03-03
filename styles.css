@@ -113,6 +113,14 @@ header {
     transition: 0.2s ease;
 }
 
+.category-list li.active {
+    background-color: var(--color-primary);
+}
+
+.category-list li.active .count {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .count {
     background-color: #273449;
     padding: 4px 8px;
