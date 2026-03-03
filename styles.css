@@ -102,6 +102,24 @@ header {
     color: var(--color-muted);
 }
 
+.category-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.count {
+    background-color: #273449;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
 .urgent {
     background-color: var(--color-urgent);
 }
