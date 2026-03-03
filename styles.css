@@ -30,19 +30,18 @@
 }
 
 body {
-  font-family: var(--font-main);
-  background-color: var(--color-bg);
-  color: var(--color-text);
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 /* 
    HEADER
  */
 header {
-  background: var(--color-primary);
-  color: white;
-  padding: var(--spacing);
-  text-align: center;
+    background-color: #1e1b4b; /* morado más profundo */
+    color: white;
+    padding: var(--spacing-md);
 }
 
 /* 
@@ -57,37 +56,36 @@ header {
    SIDEBAR
  */
 .sidebar {
-  width: 250px;
-  background: white;
-  padding: var(--spacing);
-  border-right: 1px solid #ddd;
+    width: 250px;
+    background-color: var(--color-sidebar);
+    padding: var(--spacing-lg);
 }
 
 /* 
    CONTENIDO
  */
 .content {
-  flex: 1;
-  padding: var(--spacing);
+    flex: 1;
+    padding: var(--spacing-lg);
 }
 
 /* 
    TARJETAS DE TAREAS
  */
 .task {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--color-card);
-  padding: var(--spacing);
-  margin-bottom: var(--spacing);
-  border-radius: var(--radius);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-card);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: 10px;
+    transition: 0.2s ease;
 }
 
 .task:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    background-color: #273449;
 }
 
 /* BADGES */
@@ -97,6 +95,11 @@ header {
     color: white;
     font-size: 0.8rem;
     font-weight: 500;
+}
+
+.category {
+    font-size: 0.9rem;
+    color: var(--color-muted);
 }
 
 .urgent {
